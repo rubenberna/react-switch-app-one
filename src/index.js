@@ -10,4 +10,3 @@ App.propTypes = {
   searchInput: PropTypes.string,
   text: PropTypes.string
 }
-
