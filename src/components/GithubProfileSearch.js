@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import styles from '../styles.module.scss'
 import axios from 'axios'
 import BeatLoader from 'react-spinners/ClipLoader'
+import GithubLogo from './github-logo.png'
 
 export const GithubProfileSearch = ({ searchInput }) => {
   const [profile, setProfile] = useState()
   const [loading, setLoading] = useState(false)
 
+  console.log(GithubLogo)
 
   const fetchProfile = async () => {
     setLoading(true)
@@ -25,11 +27,11 @@ export const GithubProfileSearch = ({ searchInput }) => {
       />
       <div>
         <p>
-          <span className={styles.githubProfileDetail}>Name: </span>
+          <span style={{ fontWeight: 600 }}>Name: </span>
           <span>{profile.name}</span>
         </p>
         <p>
-          <span className={styles.githubProfileDetail}>Login: </span>
+          <span style={{ fontWeight: 600 }}>Login: </span>
           <span>{profile.name}</span>
         </p>
       </div>
@@ -43,7 +45,9 @@ export const GithubProfileSearch = ({ searchInput }) => {
           Search input: <span className={styles.italic}>{searchInput}</span>
         </p>
       )}
-      <button onClick={fetchProfile}>Search Github profiles</button>
+      <button onClick={fetchProfile}>
+        Search Github profiles
+      </button>
       <BeatLoader size={70} color='#399D8B' loading={loading} />
       {profile && renderProfile()}
     </div>
