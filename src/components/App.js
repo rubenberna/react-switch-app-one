@@ -2,14 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Header } from './Header'
 import { Counter } from './Counter'
-import { MediumProfileSearch } from './MediumProfileSearch'
+import { GithubProfileSearch } from './GithubProfileSearch'
 
 export const App = ({ text, searchInput }) => {
   return (
     <React.Fragment>
       <Header text={text} />
-      <Counter />
-      <MediumProfileSearch searchInput={searchInput} />
+      <GithubProfileSearch searchInput={searchInput} />
     </React.Fragment>
   )
 }

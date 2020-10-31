@@ -12,6 +12,18 @@
   margin: 10px;
 }
 
+.marginRight {
+  margin-right: 5px;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.italic {
+  font-style: italic;
+}
+
 .flexColumnCentered {
   display: flex;
   flex-direction: column;
@@ -19,10 +31,22 @@
   align-items: center;
 }
 
-.marginRight {
-  margin-right: 5px;
-}
+.githubProfile {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  border: 1px solid cadetblue;
+  padding: 24px;
+  border-radius: 5px;
 
-.textCenter {
-  text-align: center;
+  .githubProfileAvatar {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .githubProfileDetail {
+    font-weight: 600;
+  }
 }
