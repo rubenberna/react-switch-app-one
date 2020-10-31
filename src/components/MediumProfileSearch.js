@@ -1,18 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-const containerStyle = {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
-  margin: '20px 0'
-}
+import styles from '../styles.module.css'
 
 export const MediumProfileSearch = ({ searchInput }) => {
   return (
-    <div style={containerStyle}>
-      <span>{searchInput}</span>
+    <div className={styles.flexColumnCentered}>
+      <p>Search input: {searchInput}</p>
       <button>Search Medium profiles</button>
     </div>
   )
