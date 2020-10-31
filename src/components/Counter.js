@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Boring } from './Giphy'
-import styles from '../styles.module.css'
+import styles from '../styles.module.scss'
 
 export const Counter = () => {
   const [count, setCount] = useState(0)
