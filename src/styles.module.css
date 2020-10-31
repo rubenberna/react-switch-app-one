@@ -8,11 +8,23 @@
   text-align: center;
 }
 
+.margin {
+  margin: 10px;
+}
+
 .flexColumnCentered {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.flexRowCentered {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
 .marginRight {

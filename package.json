@@ -1,5 +1,5 @@
 {
-  "name": "@rubenberna/react-switch-app-one",
+  "name": "react-switch-app-one",
   "version": "1.0.0",
   "description": "Made with create-react-library",
   "author": "rubenberna",
@@ -24,7 +24,9 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "axios": "^0.21.0",
+    "react": "^16.0.0",
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "microbundle-crl": "^0.13.10",
@@ -49,5 +51,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "axios": "^0.21.0",
+    "prop-types": "^15.7.2"
+  }
 }
