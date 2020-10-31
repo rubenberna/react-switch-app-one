@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from '../styles.module.scss'
+import { textCenter, header } from './_styles'
 
 export const Header = ({ text }) => (
-  <div className={styles.textCenter}>
-    <h2 className={styles.header}>App One</h2>
+  <div style={textCenter}>
+    <h2 style={header}>App One</h2>
     <p>{text}</p>
   </div>
 )

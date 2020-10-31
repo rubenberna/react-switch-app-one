@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import styles from '../styles.module.scss'
 import axios from 'axios'
 import BeatLoader from 'react-spinners/ClipLoader'
-import GithubLogo from './github-logo.png'
+import {
+  avatar,
+  flexColumnContainer,
+  italic,
+  profileStyle,
+  subTitle
+} from './_styles'
 
 export const GithubProfileSearch = ({ searchInput }) => {
   const [profile, setProfile] = useState()
@@ -18,19 +23,19 @@ export const GithubProfileSearch = ({ searchInput }) => {
   }
 
   const renderProfile = () => (
-    <div className={styles.githubProfile}>
+    <div style={profileStyle}>
       <img
-        className={styles.githubProfileAvatar}
+        style={avatar}
         src={profile.avatar_url}
         alt='github avatar'
       />
       <div>
         <p>
-          <span style={{ fontWeight: 600 }}>Name: </span>
+          <span style={subTitle}>Name: </span>
           <span>{profile.name}</span>
         </p>
         <p>
-          <span style={{ fontWeight: 600 }}>Login: </span>
+          <span style={subTitle}>Login: </span>
           <span>{profile.name}</span>
         </p>
       </div>
@@ -38,10 +43,10 @@ export const GithubProfileSearch = ({ searchInput }) => {
   )
 
   return (
-    <div className={styles.flexColumnCentered}>
+    <div style={flexColumnContainer}>
       {searchInput && (
         <p>
-          Search input: <span className={styles.italic}>{searchInput}</span>
+          Search input: <span style={italic}>{searchInput}</span>
         </p>
       )}
       <button onClick={fetchProfile} type={'submit'}>
