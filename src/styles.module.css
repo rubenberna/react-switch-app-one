@@ -1,9 +1,24 @@
 /* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
+.header {
+  color: cadetblue;
+  font-weight: 200;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.flexColumnCentered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.marginRight {
+  margin-right: 5px;
+}
+
+.textCenter {
   text-align: center;
 }
