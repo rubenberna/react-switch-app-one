@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from '../styles.module.css'
 
 const containerStyle = {
   display: 'flex',
@@ -13,7 +12,7 @@ const containerStyle = {
 export const MediumProfileSearch = ({ searchInput }) => {
   return (
     <div style={containerStyle}>
-      <input value={searchInput} className={styles.marginRight} />
+      <span>{searchInput}</span>
       <button>Search Medium profiles</button>
     </div>
   )
