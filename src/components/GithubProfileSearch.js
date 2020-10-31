@@ -9,9 +9,8 @@ export const GithubProfileSearch = ({ searchInput }) => {
   const [profile, setProfile] = useState()
   const [loading, setLoading] = useState(false)
 
-  console.log(GithubLogo)
-
-  const fetchProfile = async () => {
+  const fetchProfile = async (e) => {
+    e.preventDefault()
     setLoading(true)
     const res = await axios.get(`https://api.github.com/users/${searchInput}`)
     setLoading(false)
@@ -45,7 +44,7 @@ export const GithubProfileSearch = ({ searchInput }) => {
           Search input: <span className={styles.italic}>{searchInput}</span>
         </p>
       )}
-      <button onClick={fetchProfile}>
+      <button onClick={fetchProfile} type={'submit'}>
         Search Github profiles
       </button>
       <BeatLoader size={70} color='#399D8B' loading={loading} />
