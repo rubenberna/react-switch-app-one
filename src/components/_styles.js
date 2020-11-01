@@ -25,12 +25,23 @@ export const flexColumnContainer = {
   alignItems: 'center'
 }
 
+export const flexRowCenter = {
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center'
+}
+
 export const textCenter = {
   textAlign: 'center'
 }
 
 export const italic = {
   fontStyle: 'italic'
+}
+
+export const smallRightMargin = {
+  marginRight: '5px'
 }
 
 export const header = {

@@ -7,8 +7,11 @@ import {
   flexColumnContainer,
   italic,
   profileStyle,
-  subTitle
+  subTitle,
+  flexRowCenter,
+  smallRightMargin
 } from './_styles'
+import { GitHubIcon } from './_icons'
 
 export const GithubProfileSearch = ({ searchInput }) => {
   const [profile, setProfile] = useState()
@@ -18,6 +21,7 @@ export const GithubProfileSearch = ({ searchInput }) => {
     e.preventDefault()
     setLoading(true)
     const res = await axios.get(`https://api.github.com/users/${searchInput}`)
+    console.log(res.data)
     setLoading(false)
     setProfile(res.data)
   }
@@ -35,8 +39,8 @@ export const GithubProfileSearch = ({ searchInput }) => {
           <span>{profile.name}</span>
         </p>
         <p>
-          <span style={subTitle}>Login: </span>
-          <span>{profile.name}</span>
+          <span style={subTitle}>Repos: </span>
+          <span>{profile.public_repos}</span>
         </p>
       </div>
     </div>
@@ -49,7 +53,8 @@ export const GithubProfileSearch = ({ searchInput }) => {
           Search input: <span style={italic}>{searchInput}</span>
         </p>
       )}
-      <button onClick={fetchProfile} type={'submit'}>
+      <button onClick={fetchProfile} type="submit" style={flexRowCenter}>
+        <GitHubIcon style={smallRightMargin}/>
         Search Github profiles
       </button>
       <BeatLoader size={70} color='#399D8B' loading={loading} />
